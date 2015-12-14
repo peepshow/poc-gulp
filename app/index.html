@@ -1,0 +1,336 @@
+{% extends "layouts/default.html" %}
+{% block header %}
+<div class="grid">
+  <h1>HELLO ASSHOLES</h1>
+</div>
+{% endblock %}
+{% block content %}
+<!-- <div class="hero-unit">
+  <h1>'Allo, 'Allo!</h1>
+  <p>You now have</p>
+  <ul>
+    <li>HTML5 Boilerplate</li>
+    <li>Sass</li>
+    <li>Modernizr</li>
+    <li>jQuery</li>
+  </ul>
+</div> -->
+<!-- <section ng-app="app">
+  <ul class="flexgrid" ng-controller="AppCtrl">
+
+    <li class="grid__item" ng-repeat="post in posts">
+      <h2 class="grid__title">
+        <a class="grid__link" href="{{ post.link }}" ng-bind-html="post.title.rendered | to_trusted"></a>
+      </h2>
+    </li>
+  </ul>
+</section> -->
+{# <section ng-app="app">
+  <h1 class="zoomit">WP API - json feed</h1>
+  <div class="flexgrid" ng-controller="AppCtrl">
+
+    <article class="post-module selector" ng-repeat="post in posts">
+      <div id="zoomit" class="card">
+        <img ng-src="{{post.better_featured_image.media_details.sizes.medium.source_url}}" alt="{{post.title.rendered}}">
+        <div class="details">
+          <h1 class="entry-title"><a href="{{ post.link }}" ng-bind-html="post.title.rendered | to_trusted"></a></h1>
+        </div>
+        <div class='description badgers' ng-show="post.excerpt.rendered !== ''" ng-bind-html="post.excerpt.rendered | to_trusted"></div>
+      </div>
+    </article>
+
+  </div>
+</section> #}
+<section ng-app="app">
+
+  <ul class="grid" ng-controller="AppCtrl">
+    <li class="grid__item" ng-repeat="post in posts">
+       <img ng-src="{{post.better_featured_image.media_details.sizes.medium.source_url}}" alt="{{post.title.rendered}}">
+      <a class="grid__link" href="{{ post.link }}">
+        <h2 class="entry-title" ng-bind-html="post.title.rendered | to_trusted"></h2>
+        <div class='description badgers' ng-show="post.excerpt.rendered !== ''" ng-bind-html="post.excerpt.rendered | to_trusted"></div>
+      </a>
+    </li>
+  </ul>
+</section>
+  {# <li class="grid__item">
+    <a href="" class="grid__link">
+      <h2 class="grid__title">Truffaut occupy bio</h2>
+      <p>Posted by Nick</p>
+    </a>
+  </li>
+  <li class="grid__item">
+    <a href="" class="grid__link">
+      <h2 class="grid__title">batch whale flannel</h2>
+      <p>Posted by Gale</p>
+    </a>
+  </li>
+  <li class="grid__item">
+    <a href="" class="grid__link">
+      <h2 class="grid__title">kitsch migas fashion</h2>
+      <p>Posted by Audrey</p>
+    </a>
+  </li>
+  <li class="grid__item">
+    <a href="" class="grid__link">
+      <h2 class="grid__title">blog tofu tousled</h2>
+      <p>Posted by Sarah</p>
+    </a>
+  </li>
+  <li class="grid__item">
+    <a href="" class="grid__link">
+      <h2 class="grid__title">Readymade Austin</h2>
+      <p>Posted by Bethany</p>
+    </a>
+  </li>
+  <li class="grid__item">
+    <a href="" class="grid__link">
+      <h2 class="grid__title">aesthetic jean shorts</h2>
+      <p>Posted by Michael</p>
+    </a>
+  </li>
+  <li class="grid__item">
+    <a href="" class="grid__link">
+      <h2 class="grid__title">Tote bag bespoke</h2>
+      <p>Posted by Gavin</p>
+    </a>
+  </li>
+  <li class="grid__item">
+    <a href="" class="grid__link">
+      <h2 class="grid__title">Bicycle rights irony</h2>
+      <p>Posted by Max</p>
+    </a>
+  </li>
+  <li class="grid__item">
+    <a href="" class="grid__link">
+      <h2 class="grid__title">Bicycle rights irony</h2>
+      <p>Posted by Max</p>
+    </a>
+  </li>
+  <li class="grid__item">
+    <a href="" class="grid__link">
+      <h2 class="grid__title">Bicycle rights irony</h2>
+      <p>Posted by Max</p>
+    </a>
+  </li>
+  <li class="grid__item">
+    <a href="" class="grid__link">
+      <h2 class="grid__title">Bicycle rights irony</h2>
+      <p>Posted by Max</p>
+    </a>
+  </li>
+</ul>#}
+
+{# <section class="post">
+  <article class="post__wrapper">
+    <h1>Brooklyn Put A Bird On It</h1>
+    <h3>Posted by David</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum dolorum, tempore excepturi, commodi unde quia pariatur! Quaerat obcaecati voluptatem maiores. Facilis, quis, sequi. Dolor eius nam consequatur, nostrum molestiae?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere excepturi nisi ipsam est. Molestias fuga nemo sit, porro amet. Qui ut recusandae quam ad itaque magnam, autem quae vitae, perspiciatis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit porro ullam eaque voluptatem, a, id cum tempora at error! Quidem in dolorum voluptate, dolorem ut mollitia earum ab ex qui!</p>
+  </article>
+  <a href="" class="post__back">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z"/><path d="M0 0h24v24h-24z" fill="none"/>
+</svg> Back to posts
+  </a>
+  <a href="" class="post__forw">
+    Next post<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24h-24z" fill="none"/><path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg>
+  </a>
+</section>
+<section class="post">
+  <article class="post__wrapper">
+    <h1>Truffaut Occupy Bio</h1>
+    <h3>Posted by Nick</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum dolorum, tempore excepturi, commodi unde quia pariatur! Quaerat obcaecati voluptatem maiores. Facilis, quis, sequi. Dolor eius nam consequatur, nostrum molestiae?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere excepturi nisi ipsam est. Molestias fuga nemo sit, porro amet. Qui ut recusandae quam ad itaque magnam, autem quae vitae, perspiciatis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit porro ullam eaque voluptatem, a, id cum tempora at error! Quidem in dolorum voluptate, dolorem ut mollitia earum ab ex qui!</p>
+  </article>
+  <a href="" class="post__back">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z"/><path d="M0 0h24v24h-24z" fill="none"/>
+</svg> Back to posts
+  </a>
+  <a href="" class="post__forw">
+    Next post<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24h-24z" fill="none"/><path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg>
+  </a>
+</section>
+<section class="post">
+  <article class="post__wrapper">
+    <h1>Batch Whale Flannel</h1>
+    <h3>Posted by Gale</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum dolorum, tempore excepturi, commodi unde quia pariatur! Quaerat obcaecati voluptatem maiores. Facilis, quis, sequi. Dolor eius nam consequatur, nostrum molestiae?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere excepturi nisi ipsam est. Molestias fuga nemo sit, porro amet. Qui ut recusandae quam ad itaque magnam, autem quae vitae, perspiciatis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit porro ullam eaque voluptatem, a, id cum tempora at error! Quidem in dolorum voluptate, dolorem ut mollitia earum ab ex qui!</p>
+  </article>
+  <a href="" class="post__back">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z"/><path d="M0 0h24v24h-24z" fill="none"/>
+</svg> Back to posts
+  </a>
+  <a href="" class="post__forw">
+    Next post<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24h-24z" fill="none"/><path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg>
+  </a>
+</section>
+<section class="post">
+  <article class="post__wrapper">
+    <h1>Kitsch Migas Fashion</h1>
+    <h3>Posted by Audrey</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum dolorum, tempore excepturi, commodi unde quia pariatur! Quaerat obcaecati voluptatem maiores. Facilis, quis, sequi. Dolor eius nam consequatur, nostrum molestiae?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere excepturi nisi ipsam est. Molestias fuga nemo sit, porro amet. Qui ut recusandae quam ad itaque magnam, autem quae vitae, perspiciatis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit porro ullam eaque voluptatem, a, id cum tempora at error! Quidem in dolorum voluptate, dolorem ut mollitia earum ab ex qui!</p>
+  </article>
+  <a href="" class="post__back">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z"/><path d="M0 0h24v24h-24z" fill="none"/>
+</svg> Back to posts
+  </a>
+  <a href="" class="post__forw">
+    Next post<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24h-24z" fill="none"/><path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg>
+  </a>
+</section>
+<section class="post">
+  <article class="post__wrapper">
+    <h1>Blog Tofu Tousled</h1>
+    <h3>Posted by Sarah</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum dolorum, tempore excepturi, commodi unde quia pariatur! Quaerat obcaecati voluptatem maiores. Facilis, quis, sequi. Dolor eius nam consequatur, nostrum molestiae?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere excepturi nisi ipsam est. Molestias fuga nemo sit, porro amet. Qui ut recusandae quam ad itaque magnam, autem quae vitae, perspiciatis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit porro ullam eaque voluptatem, a, id cum tempora at error! Quidem in dolorum voluptate, dolorem ut mollitia earum ab ex qui!</p>
+  </article>
+  <a href="" class="post__back">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z"/><path d="M0 0h24v24h-24z" fill="none"/>
+</svg> Back to posts
+  </a>
+  <a href="" class="post__forw">
+    Next post<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24h-24z" fill="none"/><path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg>
+  </a>
+</section>
+<section class="post">
+  <article class="post__wrapper">
+    <h1>Readymade Austin</h1>
+    <h3>Posted by Bethany</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum dolorum, tempore excepturi, commodi unde quia pariatur! Quaerat obcaecati voluptatem maiores. Facilis, quis, sequi. Dolor eius nam consequatur, nostrum molestiae?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere excepturi nisi ipsam est. Molestias fuga nemo sit, porro amet. Qui ut recusandae quam ad itaque magnam, autem quae vitae, perspiciatis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit porro ullam eaque voluptatem, a, id cum tempora at error! Quidem in dolorum voluptate, dolorem ut mollitia earum ab ex qui!</p>
+  </article>
+  <a href="" class="post__back">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z"/><path d="M0 0h24v24h-24z" fill="none"/>
+</svg> Back to posts
+  </a>
+  <a href="" class="post__forw">
+    Next post<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24h-24z" fill="none"/><path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg>
+  </a>
+</section>
+<section class="post">
+  <article class="post__wrapper">
+    <h1>Aesthetic Jean Shorts</h1>
+    <h3>Posted by Michael</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum dolorum, tempore excepturi, commodi unde quia pariatur! Quaerat obcaecati voluptatem maiores. Facilis, quis, sequi. Dolor eius nam consequatur, nostrum molestiae?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere excepturi nisi ipsam est. Molestias fuga nemo sit, porro amet. Qui ut recusandae quam ad itaque magnam, autem quae vitae, perspiciatis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit porro ullam eaque voluptatem, a, id cum tempora at error! Quidem in dolorum voluptate, dolorem ut mollitia earum ab ex qui!</p>
+  </article>
+  <a href="" class="post__back">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z"/><path d="M0 0h24v24h-24z" fill="none"/>
+</svg> Back to posts
+  </a>
+  <a href="" class="post__forw">
+    Next post<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24h-24z" fill="none"/><path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg>
+  </a>
+</section>
+<section class="post">
+  <article class="post__wrapper">
+    <h1>Tote Bag Bespoke</h1>
+    <h3>Posted by Gavin</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum dolorum, tempore excepturi, commodi unde quia pariatur! Quaerat obcaecati voluptatem maiores. Facilis, quis, sequi. Dolor eius nam consequatur, nostrum molestiae?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere excepturi nisi ipsam est. Molestias fuga nemo sit, porro amet. Qui ut recusandae quam ad itaque magnam, autem quae vitae, perspiciatis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit porro ullam eaque voluptatem, a, id cum tempora at error! Quidem in dolorum voluptate, dolorem ut mollitia earum ab ex qui!</p>
+  </article>
+  <a href="" class="post__back">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z"/><path d="M0 0h24v24h-24z" fill="none"/>
+</svg> Back to posts
+  </a>
+  <a href="" class="post__forw">
+    Next post<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24h-24z" fill="none"/><path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg>
+  </a>
+</section>
+<section class="post">
+  <article class="post__wrapper">
+    <h1>Bicycle Rights Irony</h1>
+    <h3>Posted by Max</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum dolorum, tempore excepturi, commodi unde quia pariatur! Quaerat obcaecati voluptatem maiores. Facilis, quis, sequi. Dolor eius nam consequatur, nostrum molestiae?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere excepturi nisi ipsam est. Molestias fuga nemo sit, porro amet. Qui ut recusandae quam ad itaque magnam, autem quae vitae, perspiciatis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit porro ullam eaque voluptatem, a, id cum tempora at error! Quidem in dolorum voluptate, dolorem ut mollitia earum ab ex qui!</p>
+  </article>
+  <a href="" class="post__back">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z"/><path d="M0 0h24v24h-24z" fill="none"/>
+</svg> Back to posts
+  </a>
+  <a href="" class="post__forw">
+    Next post<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24h-24z" fill="none"/><path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg>
+  </a>
+</section>
+<section class="post">
+  <article class="post__wrapper">
+    <h1>Bicycle Rights Irony</h1>
+    <h3>Posted by Max</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum dolorum, tempore excepturi, commodi unde quia pariatur! Quaerat obcaecati voluptatem maiores. Facilis, quis, sequi. Dolor eius nam consequatur, nostrum molestiae?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere excepturi nisi ipsam est. Molestias fuga nemo sit, porro amet. Qui ut recusandae quam ad itaque magnam, autem quae vitae, perspiciatis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit porro ullam eaque voluptatem, a, id cum tempora at error! Quidem in dolorum voluptate, dolorem ut mollitia earum ab ex qui!</p>
+  </article>
+  <a href="" class="post__back">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z"/><path d="M0 0h24v24h-24z" fill="none"/>
+</svg> Back to posts
+  </a>
+  <a href="" class="post__forw">
+    Next post<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24h-24z" fill="none"/><path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg>
+  </a>
+</section>
+<section class="post">
+  <article class="post__wrapper">
+    <h1>Bicycle Rights Irony</h1>
+    <h3>Posted by Max</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum dolorum, tempore excepturi, commodi unde quia pariatur! Quaerat obcaecati voluptatem maiores. Facilis, quis, sequi. Dolor eius nam consequatur, nostrum molestiae?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere excepturi nisi ipsam est. Molestias fuga nemo sit, porro amet. Qui ut recusandae quam ad itaque magnam, autem quae vitae, perspiciatis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit porro ullam eaque voluptatem, a, id cum tempora at error! Quidem in dolorum voluptate, dolorem ut mollitia earum ab ex qui!</p>
+  </article>
+  <a href="" class="post__back">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z"/><path d="M0 0h24v24h-24z" fill="none"/>
+</svg> Back to posts
+  </a>
+  <a href="" class="post__forw">
+    Next post<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24h-24z" fill="none"/><path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg>
+  </a>
+</section>
+<section class="post">
+  <article class="post__wrapper">
+    <h1>Bicycle Rights Irony</h1>
+    <h3>Posted by Max</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum dolorum, tempore excepturi, commodi unde quia pariatur! Quaerat obcaecati voluptatem maiores. Facilis, quis, sequi. Dolor eius nam consequatur, nostrum molestiae?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere excepturi nisi ipsam est. Molestias fuga nemo sit, porro amet. Qui ut recusandae quam ad itaque magnam, autem quae vitae, perspiciatis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit porro ullam eaque voluptatem, a, id cum tempora at error! Quidem in dolorum voluptate, dolorem ut mollitia earum ab ex qui!</p>
+  </article>
+  <a href="" class="post__back">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z"/><path d="M0 0h24v24h-24z" fill="none"/>
+</svg> Back to posts
+  </a>
+  <a href="" class="post__forw">
+    Next post<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24h-24z" fill="none"/><path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg>
+  </a>
+</section>
+<section class="post">
+  <article class="post__wrapper">
+    <h1>Bicycle Rights Irony</h1>
+    <h3>Posted by Max</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere earum dolorum, tempore excepturi, commodi unde quia pariatur! Quaerat obcaecati voluptatem maiores. Facilis, quis, sequi. Dolor eius nam consequatur, nostrum molestiae?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere excepturi nisi ipsam est. Molestias fuga nemo sit, porro amet. Qui ut recusandae quam ad itaque magnam, autem quae vitae, perspiciatis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit porro ullam eaque voluptatem, a, id cum tempora at error! Quidem in dolorum voluptate, dolorem ut mollitia earum ab ex qui!</p>
+  </article>
+  <a href="" class="post__back">
+    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h5v-6h-5v6zm0 7h5v-6h-5v6zm6 0h5v-6h-5v6zm6 0h5v-6h-5v6zm-6-7h5v-6h-5v6zm6-6v6h5v-6h-5z"/><path d="M0 0h24v24h-24z" fill="none"/>
+</svg> Back to posts
+  </a>
+  <a href="" class="post__forw">
+    Next post<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24h-24z" fill="none"/><path d="M12 4l-1.41 1.41 5.58 5.59h-12.17v2h12.17l-5.58 5.59 1.41 1.41 8-8z"/></svg>
+  </a>
+</section>#}
+{% endblock %}
+
+{% block footer %}
+<h1>Bye-Bye ASSHOLES</h1>
+{% endblock %}

@@ -1,0 +1,19 @@
+{
+  "name": "poc-gulp",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.1",
+    "angular": "~1.4.8",
+    "scrollmagic": "ScrollMagic#~2.0.5",
+    "gsap": "~1.18.0",
+    "bourbon": "~4.2.6",
+    "normalize-css": "normalize.css#~3.0.3",
+    "animate.css": "~3.4.0",
+    "neat": "~1.7.2"
+  },
+  "devDependencies": {
+    "chai": "~3.4.2",
+    "mocha": "~2.3.4"
+  }
+}
